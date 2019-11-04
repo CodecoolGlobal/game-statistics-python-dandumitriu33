@@ -74,3 +74,11 @@ def sort_abc(file_name):
     titles = [i[0] for i in data_dict.values()]
     bubble_srt(titles)
     return titles
+
+
+def get_genres(file_name):
+    data_dict = file_to_dict(file_name)
+    genres = [i[3] for i in data_dict.values()]
+    set_genres = set(genres)
+    genres = bubble_srt(list(set_genres))
+    return genres
