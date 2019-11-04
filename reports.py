@@ -82,3 +82,19 @@ def get_genres(file_name):
     set_genres = set(genres)
     genres = bubble_srt(list(set_genres))
     return genres
+
+
+def when_was_top_sold_fps(file_name):
+    data_dict = file_to_dict(file_name)
+    copies_sold = []
+    title_copies_year_genre = []
+    for i in data_dict.values():
+        if i[3] == 'First-person shooter':
+            copies_sold.append(float(i[1]))
+            title_copies_year_genre.append((i[0], float(i[1]), i[2], i[3]))
+    if title_copies_year_genre == []:
+        raise ValueError('Game genre does not exist in the list.')
+    top_sold = max(copies_sold)
+    for j in title_copies_year_genre:
+        if j[1] == top_sold:
+            return int(j[2])
