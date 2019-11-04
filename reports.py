@@ -13,3 +13,11 @@ def file_to_dict(file_name):
 def count_games(file_name):
     data_dict = file_to_dict(file_name)
     return len(data_dict)
+
+
+def decide(file_name, year):
+    data_dict = file_to_dict(file_name)
+    for value in data_dict.values():
+        if str(year) in value:
+            return True
+    return False
