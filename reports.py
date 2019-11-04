@@ -36,3 +36,12 @@ def get_latest(file_name):
             most_recent_games.append(j)
     sorted_recent_games_by_pos = sorted(most_recent_games, key = lambda x: x[0])
     return sorted_recent_games_by_pos[0][1]
+
+
+def count_by_genre(file_name, genre):
+    data_dict = file_to_dict(file_name)
+    game_counter = 0
+    for i in data_dict.values():
+        if genre in i:
+            game_counter += 1
+    return game_counter
