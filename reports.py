@@ -10,6 +10,14 @@ def file_to_dict(file_name):
     return working_dict
 
 
+def bubble_srt(list_name):
+    for i in range(len(list_name)):
+        for j in range(0, len(list_name) - i - 1):
+            if list_name[j] > list_name[j+1]:
+                list_name[j], list_name[j+1] = list_name[j+1], list_name[j]
+    return list_name
+
+
 def count_games(file_name):
     data_dict = file_to_dict(file_name)
     return len(data_dict)
@@ -25,17 +33,19 @@ def decide(file_name, year):
 
 def get_latest(file_name):
     data_dict = file_to_dict(file_name)
+    just_years = []
     pos_title_year = []
     for i in data_dict.keys():
+        just_years.append(data_dict[i][2])
         pos_title_year.append((i, data_dict[i][0], data_dict[i][2]))
-    sorted_year = sorted(pos_title_year, key = lambda x: x[2])
-    latest_year = sorted_year[-1][2]
+    srt_just_years = bubble_srt(just_years)
+    latest_year = srt_just_years[-1]
     most_recent_games = []
-    for j in sorted_year:
+    for j in pos_title_year:
         if j[2] == latest_year:
             most_recent_games.append(j)
-    sorted_recent_games_by_pos = sorted(most_recent_games, key = lambda x: x[0])
-    return sorted_recent_games_by_pos[0][1]
+    srt_recent_games_by_pos = bubble_srt(most_recent_games)
+    return srt_recent_games_by_pos[0][1]
 
 
 def count_by_genre(file_name, genre):
@@ -57,3 +67,10 @@ def get_line_number_by_title(file_name, title):
             game_doesnt_exist = True
     if game_doesnt_exist is True:
         raise ValueError('The game is not in the list.')
+
+
+def sort_abc(file_name):
+    data_dict = file_to_dict(file_name)
+    titles = [i[0] for i in data_dict.values()]
+    bubble_srt(titles)
+    return titles
