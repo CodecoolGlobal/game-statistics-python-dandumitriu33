@@ -1,0 +1,8 @@
+The total number of games is 24.
+Are there games from 2011 on the list? True
+The latest game on the list is Diablo III.
+There are 5 RPG games.
+Diablo III is number 4 on the list.
+Here are the games, alphabetically ordered: ['Age of Empires', 'Command & Conquer', 'Counter-Strike', 'Counter-Strike: Condition Zero', 'Crysis', 'Diablo II', 'Diablo III', 'Doom 3', 'EverQuest', "Garry's Mod", 'Guild Wars', 'Half-Life', 'Half-Life 2', 'Minecraft', 'Populous', 'StarCraft', 'StarCraft II: Wings of Liberty', 'Terraria', 'The Sims', 'The Sims 2', 'The Sims 3', 'Warcraft III: Reign of Chaos', 'Warhammer 40,000: Dawn of War (including expansions)', 'World of Warcraft']
+Here are the genres, alphabetically ordered: ['Action-adventure', 'First-person shooter', 'RPG', 'Real-time strategy', 'Sandbox', 'Simulation', 'Survival game']
+The top most sold First-person shooter game was released in 1999.
