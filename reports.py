@@ -45,3 +45,15 @@ def count_by_genre(file_name, genre):
         if genre in i:
             game_counter += 1
     return game_counter
+
+
+def get_line_number_by_title(file_name, title):
+    data_dict = file_to_dict(file_name)
+    game_doesnt_exist = False
+    for i in data_dict.keys():
+        if title in data_dict[i]:
+            return i
+        else:
+            game_doesnt_exist = True
+    if game_doesnt_exist is True:
+        raise ValueError('The game is not in the list.')
