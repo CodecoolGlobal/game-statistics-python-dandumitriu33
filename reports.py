@@ -21,3 +21,18 @@ def decide(file_name, year):
         if str(year) in value:
             return True
     return False
+
+
+def get_latest(file_name):
+    data_dict = file_to_dict(file_name)
+    pos_title_year = []
+    for i in data_dict.keys():
+        pos_title_year.append((i, data_dict[i][0], data_dict[i][2]))
+    sorted_year = sorted(pos_title_year, key = lambda x: x[2])
+    latest_year = sorted_year[-1][2]
+    most_recent_games = []
+    for j in sorted_year:
+        if j[2] == latest_year:
+            most_recent_games.append(j)
+    sorted_recent_games_by_pos = sorted(most_recent_games, key = lambda x: x[0])
+    return sorted_recent_games_by_pos[0][1]
