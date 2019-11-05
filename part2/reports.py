@@ -54,3 +54,10 @@ def get_date_avg(file_name):
         years.append(float(i[2]))
     average_of_years = round(sum(years) / len(years))
     return average_of_years
+
+
+def get_game(file_name, title):
+    data_dict = file_to_dict(file_name)
+    for i in data_dict.values():
+        if title in i:
+            return [i[0], float(i[1]), int(i[2]), i[3], i[4]]
