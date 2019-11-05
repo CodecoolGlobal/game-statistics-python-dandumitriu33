@@ -8,3 +8,13 @@ def file_to_dict(file_name):
             working_dict[line_counter] = values
             line_counter += 1
     return working_dict
+
+
+def get_most_played(file_name):
+    data_dict = file_to_dict(file_name)
+    id_title_sales = []
+    for key in data_dict:
+        id_title_sales.append((key, data_dict[key][0], float(data_dict[key][1])))
+    ordered_by_id = sorted(id_title_sales, key=lambda x: x[0])
+    ordered_by_sales_id = sorted(ordered_by_id, key=lambda x: x[2])
+    return ordered_by_sales_id[-1][1]
