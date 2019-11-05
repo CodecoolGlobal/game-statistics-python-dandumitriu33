@@ -36,3 +36,12 @@ def get_selling_avg(file_name):
         sales.append(float(i[1]))
     average_of_sales = sum(sales) / len(sales)
     return average_of_sales
+
+
+def count_longest_title(file_name):
+    data_dict = file_to_dict(file_name)
+    titles = []
+    for i in data_dict.values():
+        titles.append(i[0])
+    length_ordered_titles = sorted(titles, key=lambda x: len(x))
+    return len(length_ordered_titles[-1])
