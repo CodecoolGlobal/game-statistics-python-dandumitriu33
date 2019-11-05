@@ -61,3 +61,14 @@ def get_game(file_name, title):
     for i in data_dict.values():
         if title in i:
             return [i[0], float(i[1]), int(i[2]), i[3], i[4]]
+
+
+def count_grouped_by_genre(file_name):
+    data_dict = file_to_dict(file_name)
+    genres_dict = {}
+    for i in data_dict.values():
+        if i[3] in genres_dict:
+            genres_dict[i[3]] += 1
+        else:
+            genres_dict[i[3]] = 1
+    return genres_dict
