@@ -18,3 +18,12 @@ def get_most_played(file_name):
     ordered_by_id = sorted(id_title_sales, key=lambda x: x[0])
     ordered_by_sales_id = sorted(ordered_by_id, key=lambda x: x[2])
     return ordered_by_sales_id[-1][1]
+
+
+def sum_sold(file_name):
+    data_dict = file_to_dict(file_name)
+    sales = []
+    for i in data_dict.values():
+        sales.append(float(i[1]))
+    sum_of_sales = sum(sales)
+    return sum_of_sales
