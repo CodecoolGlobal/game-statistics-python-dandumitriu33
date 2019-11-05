@@ -27,3 +27,12 @@ def sum_sold(file_name):
         sales.append(float(i[1]))
     sum_of_sales = sum(sales)
     return sum_of_sales
+
+
+def get_selling_avg(file_name):
+    data_dict = file_to_dict(file_name)
+    sales = []
+    for i in data_dict.values():
+        sales.append(float(i[1]))
+    average_of_sales = sum(sales) / len(sales)
+    return average_of_sales
