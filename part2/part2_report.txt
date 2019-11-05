@@ -3,6 +3,6 @@ The total number of games sold is 187 million.
 The average number of game copies sold is 7 million.
 The longest game title has 52 characters.
 The best release year (average releases date) was 2003.
-Diablo III information: sold 12.0 million copies, was released in 2012, its genre is RPG and it was published by Blizzard Entertainment.
-The list has the following number of games, by genre: {'Survival game': 1, 'RPG': 5, 'Action-adventure': 1, 'First-person shooter': 6, 'Simulation': 3, 'Real-time strategy': 7, 'Sandbox': 1}
-The list of games, ordered alphabetically and by release year: ['Diablo III', 'Terraria', 'StarCraft II: Wings of Liberty', 'Minecraft', 'The Sims 3', 'Crysis', "Garry's Mod", 'Guild Wars', 'Counter-Strike: Condition Zero', 'Doom 3', 'Half-Life 2', 'The Sims 2', 'Warhammer 40,000: Dawn of War (including expansions)', 'World of Warcraft', 'Warcraft III: Reign of Chaos', 'Diablo II', 'The Sims', 'Counter-Strike', 'EverQuest', 'Half-Life', 'StarCraft', 'Age of Empires', 'Command & Conquer', 'Populous']
+Half-Life information: sold 9.3 million copies, was released in 1998, its genre is First-person shooter and it was published by Valve Corporation.
+The list has the following number of games, by genre: Survival game: 1, RPG: 5, Action-adventure: 1, First-person shooter: 6, Simulation: 3, Real-time strategy: 7, Sandbox: 1.
+The list of games, ordered alphabetically and by release year: Diablo III, Terraria, StarCraft II: Wings of Liberty, Minecraft, The Sims 3, Crysis, Garry's Mod, Guild Wars, Counter-Strike: Condition Zero, Doom 3, Half-Life 2, The Sims 2, Warhammer 40,000: Dawn of War (including expansions), World of Warcraft, Warcraft III: Reign of Chaos, Diablo II, The Sims, Counter-Strike, EverQuest, Half-Life, StarCraft, Age of Empires, Command & Conquer, Populous.

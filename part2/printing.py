@@ -29,11 +29,29 @@ def print_get_game():
 
 
 def print_count_grouped_by_genre():
-    return 'The list has the following number of games, by genre: {}'.format(count_grouped_by_genre(THE_FILE))
+    print_dict = count_grouped_by_genre(THE_FILE)
+    print_list = []
+    for key in print_dict.keys():
+        print_list.append(key)
+        print_list.append(': ')
+        print_list.append(str(print_dict[key]))
+        print_list.append(', ')
+    print_list.pop()
+    temp_string = ''
+    print_string = temp_string.join(print_list)
+    return 'The list has the following number of games, by genre: {}.'.format(print_string)
 
 
 def print_get_date_ordered():
-    return 'The list of games, ordered alphabetically and by release year: {}'.format(get_date_ordered(THE_FILE))
+    returned_list = get_date_ordered(THE_FILE)
+    print_list = []
+    for i in returned_list:
+        print_list.append(i)
+        print_list.append(', ')
+    print_list.pop()
+    temp_string = ''
+    print_string = temp_string.join(print_list)
+    return 'The list of games, ordered alphabetically and by release year: {}.'.format(print_string)
 
 
 def print_all():
