@@ -45,3 +45,12 @@ def count_longest_title(file_name):
         titles.append(i[0])
     length_ordered_titles = sorted(titles, key=lambda x: len(x))
     return len(length_ordered_titles[-1])
+
+
+def get_date_avg(file_name):
+    data_dict = file_to_dict(file_name)
+    years = []
+    for i in data_dict.values():
+        years.append(float(i[2]))
+    average_of_years = round(sum(years) / len(years))
+    return average_of_years
