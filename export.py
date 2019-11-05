@@ -2,7 +2,6 @@ from printing import *
 
 
 def export_to_file():
-    body_of_text = print_all()
     with open('report.txt', 'wt') as f:
         f.write(print_count_games() + '\n')
     with open('report.txt', 'at') as f:
