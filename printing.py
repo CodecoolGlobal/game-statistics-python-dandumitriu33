@@ -27,11 +27,27 @@ def print_get_line_number_by_title():
 
 
 def print_sort_abc():
-    return f'Here are the games, alphabetically ordered: {sort_abc(THE_FILE)}'
+    returned_list = sort_abc(THE_FILE)
+    print_list = []
+    for i in returned_list:
+        print_list.append(i)
+        print_list.append(', ')
+    print_list.pop()
+    temp_string = ''
+    print_string = temp_string.join(print_list)
+    return f'Here are the games, alphabetically ordered: {print_string}.'
 
 
 def print_get_genres():
-    return f'Here are the genres, alphabetically ordered: {get_genres(THE_FILE)}'
+    returned_list = get_genres(THE_FILE)
+    print_list = []
+    for i in returned_list:
+        print_list.append(i)
+        print_list.append(', ')
+    print_list.pop()
+    temp_string = ''
+    print_string = temp_string.join(print_list)
+    return f'Here are the genres, alphabetically ordered: {print_string}.'
 
 
 def print_when_was_top_sold_fps():
