@@ -72,3 +72,17 @@ def count_grouped_by_genre(file_name):
         else:
             genres_dict[i[3]] = 1
     return genres_dict
+
+
+def get_date_ordered(file_name):
+    data_dict = file_to_dict(file_name)
+    title_year = []
+    for i in data_dict.values():
+        title_year.append([i[0], int(i[2])])
+    ordered_by_name = sorted(title_year, key=lambda x: x[0])
+    ordered_by_name.reverse()
+    ordered_by_year_name = sorted(ordered_by_name, key=lambda x: x[1])
+    titles_ordered = []
+    for j in ordered_by_year_name:
+        titles_ordered.insert(0, j[0])
+    return titles_ordered
