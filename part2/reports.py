@@ -11,6 +11,12 @@ def file_to_dict(file_name):
 
 
 def get_most_played(file_name):
+    '''
+    Returns the most played game name as string.
+
+    >>> get_most_played('game_stat.txt')
+    'Minecraft'
+    '''
     data_dict = file_to_dict(file_name)
     id_title_sales = []
     for key in data_dict:
@@ -21,6 +27,12 @@ def get_most_played(file_name):
 
 
 def sum_sold(file_name):
+    '''
+    Returns the total of games sold from the list.
+
+    >>> sum_sold('game_stat.txt')
+    187.16
+    '''
     data_dict = file_to_dict(file_name)
     sales = []
     for i in data_dict.values():
@@ -30,6 +42,12 @@ def sum_sold(file_name):
 
 
 def get_selling_avg(file_name):
+    '''
+    Returns the average of sales. All sales divided by number of games.
+
+    >>> get_selling_avg('game_stat.txt')
+    7.798333333333333
+    '''
     data_dict = file_to_dict(file_name)
     sales = []
     for i in data_dict.values():
@@ -39,6 +57,12 @@ def get_selling_avg(file_name):
 
 
 def count_longest_title(file_name):
+    '''
+    Returns character number of the longest title in the list.
+
+    >>> count_longest_title('game_stat.txt')
+    52
+    '''
     data_dict = file_to_dict(file_name)
     titles = []
     for i in data_dict.values():
@@ -48,6 +72,12 @@ def count_longest_title(file_name):
 
 
 def get_date_avg(file_name):
+    '''
+    Returns the average of release years from the list.
+
+    >>> get_date_avg('game_stat.txt')
+    2003
+    '''
     data_dict = file_to_dict(file_name)
     years = []
     for i in data_dict.values():
@@ -57,6 +87,16 @@ def get_date_avg(file_name):
 
 
 def get_game(file_name, title):
+    '''
+    Returns a list of information about the given game.
+
+    >>> get_game('game_stat.txt', 'Counter-Strike')
+    ['Counter-Strike', 12.5, 1999, 'First-person shooter', 'Valve Corporation']
+    >>> get_game('game_stat.txt', 'Doom 3')
+    ['Doom 3', 3.5, 2004, 'First-person shooter', 'Activision']
+    >>> get_game('game_stat.txt', 'Crysis')
+    ['Crysis', 3.0, 2007, 'First-person shooter', 'Electronic Arts']
+    '''
     data_dict = file_to_dict(file_name)
     for i in data_dict.values():
         if title in i:
