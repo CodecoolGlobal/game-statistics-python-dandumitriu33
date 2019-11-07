@@ -11,6 +11,15 @@ def file_to_dict(file_name):
 
 
 def bubble_srt(list_name):
+    '''
+    Sorts and returns the sorted list of elements. In this
+    exercise, the use of sort() and sorted() was not allowed.
+
+    >>> bubble_srt([5, 3, 1, 7])
+    [1, 3, 5, 7]
+    >>> bubble_srt(['acc', 'mnp', 'add', 'abc', 'zfg'])
+    ['abc', 'acc', 'add', 'mnp', 'zfg']
+    '''
     for i in range(len(list_name)):
         for j in range(0, len(list_name) - i - 1):
             if list_name[j] > list_name[j+1]:
@@ -19,11 +28,28 @@ def bubble_srt(list_name):
 
 
 def count_games(file_name):
+    '''
+    Returns the length of a dictionary (number of keys).
+    The dictionary is extracted from a given file via file_to_dict().
+
+    >>> count_games('game_stat.txt')
+    24
+    '''
     data_dict = file_to_dict(file_name)
     return len(data_dict)
 
 
 def decide(file_name, year):
+    '''
+    Checks if there are entries in the list with the given year.
+
+    >>> decide('game_stat.txt', 2011)
+    True
+    >>> decide('game_stat.txt', 2008)
+    False
+    >>> decide('game_stat.txt', 2004)
+    True
+    '''
     data_dict = file_to_dict(file_name)
     for value in data_dict.values():
         if str(year) in value:
@@ -32,6 +58,12 @@ def decide(file_name, year):
 
 
 def get_latest(file_name):
+    '''
+    Returns the title of the latest game as a string.
+
+    >>> get_latest('game_stat.txt')
+    'Diablo III'
+    '''
     data_dict = file_to_dict(file_name)
     just_years = []
     pos_title_year = []
@@ -49,6 +81,16 @@ def get_latest(file_name):
 
 
 def count_by_genre(file_name, genre):
+    '''
+    Returns the number of games in the list that are the given genre.
+
+    >>> count_by_genre('game_stat.txt', 'RPG')
+    5
+    >>> count_by_genre('game_stat.txt', 'Real-time strategy')
+    7
+    >>> count_by_genre('game_stat.txt', 'Simulation')
+    3
+    '''
     data_dict = file_to_dict(file_name)
     game_counter = 0
     for i in data_dict.values():
@@ -58,6 +100,16 @@ def count_by_genre(file_name, genre):
 
 
 def get_line_number_by_title(file_name, title):
+    '''
+    Returns the number the game is in the list, its line number.
+
+    >>> get_line_number_by_title('game_stat.txt', 'Diablo III')
+    4
+    >>> get_line_number_by_title('game_stat.txt', 'EverQuest')
+    19
+    >>> get_line_number_by_title('game_stat.txt', 'StarCraft')
+    8
+    '''
     data_dict = file_to_dict(file_name)
     game_doesnt_exist = False
     for i in data_dict.keys():
@@ -85,6 +137,12 @@ def get_genres(file_name):
 
 
 def when_was_top_sold_fps(file_name):
+    '''
+    Returns the top sold First-person shooter release year.
+
+    >>> when_was_top_sold_fps('game_stat.txt')
+    1999
+    '''
     data_dict = file_to_dict(file_name)
     copies_sold = []
     title_copies_year_genre = []
