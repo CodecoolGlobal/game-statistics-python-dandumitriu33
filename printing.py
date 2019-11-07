@@ -1,7 +1,18 @@
 from reports import *
 
 THE_FILE = 'game_stat.txt'
-THE_YEAR = input('Enter the year to see if there are games from then on the list: ')
+
+valid_year = False
+while valid_year is False:
+    try:
+        THE_YEAR = int(input('Enter the year to see if there are games from then on the list: '))
+        if THE_YEAR in range(1900, 2101):
+            valid_year = True
+        else:
+            raise ValueError
+    except ValueError:
+        print('Please chose a year between 1900 and 2100.')
+
 THE_GENRE = input('Enter a genre to count how many games it has on the list: ')
 THE_TITLE = input('Enter a title to see what number it is on the list: ')
 
